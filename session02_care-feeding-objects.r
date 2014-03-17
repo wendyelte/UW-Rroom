@@ -69,3 +69,64 @@ x^2
 
 round(rnorm(3, mean = c(0, 100, 10000)), 2)
 
+(y <- 1:3)
+(z <- 3:7)
+y + z
+
+(y <- 1:5)
+(z <- 1:10)
+y + z
+
+x <- c(1, 4, 9)
+x <- c("cabbage", pi, 0.3, TRUE)
+str(x)
+
+x <- list("cabbage", pi, 0.3, TRUE)
+str(x)
+
+x <- -3:3
+str(x)
+x < 0
+
+set.seed(1)
+(x <- round(rnorm(8), 2))
+names(x) <- letters[seq_along(x)]
+
+x[4]
+x[c(3, 5, 8)]
+x[-7]
+x < 0
+x[x < 0]
+which(x < 0)
+
+## get every other element of x ...
+x[???]
+x[seq(length(x)) %% 2 == 0]
+x[seq(2, length(x), by = 2)]
+jamesVector <- c(FALSE, TRUE)
+x[jamesVector]
+x[c(FALSE, TRUE)]
+y <- c(0, 1)
+z  <- y * x
+x[which(z != 0)]
+
+x["g"]
+x[c("a", "e", "g")]
+
+month.abb
+month.name
+
+(x <- cbind(month.abb, month.name))
+(x <- rbind(month.abb, month.name))
+
+(x <- matrix(1:10, nrow = 5))
+
+(x <- data.frame(month.num = 1:12,
+                 I(month.abb),
+                 I(month.name)))
+
+x[2, 2]
+
+
+x <- cbind(month.abb, month.name)
+y <- data.frame(mon.num = 1:12, x)
